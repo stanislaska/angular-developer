@@ -1,0 +1,31 @@
+<h2>Product List</h2>
+
+<div class="container">
+  <div class="row">
+    <table>
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Qte #</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{p.id}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.type}}</td>
+          <td>{{p.stock}}</td>
+          <td><a routerLink="/product-view/{{p.id}}">view</a></td>
+          <td><a routerLink="/product-update/{{p.id}}">update</a></td>
+          <!-- <td><a routerLink="/product-delete/{{p.id}}">delete</a></td> -->
+          <td>delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
